@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WriteUp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/Nagarro_Logo.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-fluid main_menu" id="uppernav">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto" id="uppernav">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/index"><i class="fas fa-blog"></i>WriteUp</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid main_menu">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <form action="/create" method="POST">
+                    <input type="hidden" name="_id" value="{{blogs._id}}">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title Of Blog</label>
+                        <input type="text" class="form-control" id="titleid" name="title" value="{{blogs.title}}">
+                        <div class="text-danger">
+                            {{blogs.titleError}}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Category</label>
+                        <input type="text" class="form-control" id="categoryid" name="category"
+                            value="{{blogs.category}}">
+                        <div class="text-danger">
+                            {{blogs.categoryError}}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="content" class="form-label">Content</label>
+                        <textarea class="form-control" rows="8" id="contentid"
+                            name="content">{{blogs.content}}</textarea>
+                        <div class="text-danger">
+                            {{blogs.contentError}}</div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary" id="submit" value="Submit">Submit</button>
+                        <a href="/index"><button type="button" class="btn btn-primary" id="back">Back</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>created for blog writers</p>
+        <p>By Sanjogita Mishra</p>
+    </footer>
+</body>
+
+</html>

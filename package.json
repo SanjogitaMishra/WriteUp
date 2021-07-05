@@ -1,0 +1,20 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "description": "----------------------ReadMe--------------------------",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanjogita",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "4.17",
+    "express-validator": "^6.12.0",
+    "hbs": "^4.1.2",
+    "js-alert": "^1.0.4",
+    "mongoose": "^5.13.2"
+  },
+  "devDependencies": {}
+}
